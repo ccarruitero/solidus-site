@@ -66,6 +66,11 @@ $(function () {
     disable: window.innerWidth < 1024
   });
 
+  //Show roadmap hidden features on click
+  $('.roadmap-use-case__timeline--future').click(function(){
+    $(this).children('.roadmap-use-case__timeline--future p').toggle();
+  });
+
   //Remove top bar on click
   if (!Cookies.get('announcement')) {
     $(".top-bar").addClass('top-bar--show');
